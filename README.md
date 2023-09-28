@@ -10,6 +10,23 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+`NgRx Schematics` integrates NgRx commands into Angular CLI and most of the NgRx elements can be created using Angular CLI eg. ng g action|reducer|selector counter
+Install Package:
+ng add @ngrx/schematics@latest
+
+`Need to configure Schematics with Angular CLI upon installation by making changes in angular.json`
+"cli": {
+    "schematicCollections": [
+      "@ngrx/schematics"
+    ]
+  }
+
+Other Packages required for NgRx:
+npm install @ngrx/store --save 
+npm install @ngrx/effects --save 
+npm install @ngrx/entity --save 
+npm install @ngrx/store-devtools --save
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
